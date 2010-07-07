@@ -5,7 +5,6 @@ function() {
     ok($.fn, 'JQuery');
     ok($.ui, 'JQuery UI');
     ok($.widget, 'JQuery Widget');
-    //ok($.template, 'JQuery Template');
     ok($.fn.topbar, 'TopBar');
 });
 

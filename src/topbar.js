@@ -1,3 +1,14 @@
+/*!
+ * Top Bar jQuery Widget v0.2.0RC
+ * http://github.com/Maethorin/topbar
+ *
+ * Copyright (c) 2010 Márcio Duarte
+ * Dual licensed under the MIT and GPL licenses.
+ * http://docs.jquery.com/License
+ *
+ * Date: 2010-07-07 17:51:00 (Wed, 07 Jul 2010)
+ * Revision: 3
+ */
 $.widget('ui.topbar', {
     options: {
         'leftClass': '',
