@@ -1,4 +1,54 @@
-Top Bar
--------
+h1. Top Bar jQuery Widget
+
+h2. Introduction:
 
 This is a simple top bar to be used in your web site. Its similar to the gmail top bar and Google home page top bar.
+
+Its use the jQuery widget factory (http://jqueryui.com/docs/Developer_Guide) wich simplify all hard works when creating widget for the jQuery UI.
+
+
+h2. Dependencies:
+
+* jQuery v1.4.2
+* jQuery.ui.widget v1.8.2
+
+
+h2. Using
+
+Copy the topbar.js, topbar.css and black70.png from the src folder, located here in Source.
+
+In html put:
+@
+<script src="<--the path for your js-->topbar.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="<--the path for your css-->topbar.css" type="text/css" media="screen" charset="utf-8">
+@
+
+Create a div anywhere in your HTML:
+
+@
+<div id="myTopBar"></div>
+@
+
+Implement the code to create de top bar:
+
+@
+<script type="text/javascript">
+    $('#myTopBar').topbar({
+        'leftLinks': [
+            {'text': 'One link', 'href': '/onelink/'},
+            {'text': 'Two link', 'href': '/twolink/'},
+            {'text': 'Three link', 'href': '/threelink/'},
+        ],
+        'rightSeparator': '|',
+        'rightLinks': [
+            {'text': 'Four link', 'href': '/fourlink/'},
+            {'text': 'Five link', 'current': true},
+            {'text': 'Six link', 'href': '/sixlink/'},
+            {'text': 'Seven link', 'href': '/sevenlink/'},
+        ]
+    });
+</script>
+@
+
+And that is it...
