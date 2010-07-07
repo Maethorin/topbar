@@ -1,5 +1,5 @@
 /*!
- * Top Bar jQuery Widget v0.2.0RC
+ * Top Bar jQuery Widget v0.4.0 RC
  * http://github.com/Maethorin/topbar
  *
  * Copyright (c) 2010 Márcio Duarte

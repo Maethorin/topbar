@@ -6,6 +6,9 @@ This is a simple top bar to be used in your web site. Its similar to the gmail t
 
 Its use the "jQuery widget factory":http://jqueryui.com/docs/Developer_Guide wich simplify all hard works when creating widget for the jQuery UI.
 
+h3. Version
+
+v0.4.0 RC
 
 h2. Dependencies:
 
