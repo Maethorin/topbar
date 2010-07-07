@@ -45,14 +45,17 @@ $.widget('ui.topbar', {
     },
     _putLinksInDiv: function(position) {
         for (var i = 0; i < this.options[position + 'Links'].length; i++) {
-            item = this.options[position + 'Links'][i];
+            var item = this.options[position + 'Links'][i];
             var $el = $('<a></a>');
             $el.attr('href', item.href);
             if (item.current) {
                 $el = $('<b></b>')
             }
+            if (this.options[position + 'Separator'] && i > 0) {
+                this[position + 'Div'].append(this.options[position + 'Separator']);
+            }
             $el.text(item.text);
-            $el.appendTo(this[position + 'Div']);
+            $el.appendTo(this[position + 'Div']);            
         }
     }
 });

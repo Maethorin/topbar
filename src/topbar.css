@@ -2,10 +2,8 @@ div#topbar {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #000;
+    background: url("../src/black70.png") repeat scroll 0 0 transparent;
     width: 100%;
-    opacity: 0.6;
-    filter: alpha(opacity=40);
 }
 
 div#topbar div {
@@ -30,12 +28,5 @@ div#topbar div a, div#topbar div b {
     color: white;
     font-family: arial, sans-serif;
     font-size: 13px;
-}
-
-div#topbar div.left a, div#topbar div.left b {
-    margin-right: 13px;
-}
-
-div#topbar div.right a, div#topbar div.right b {
-    margin-left: 13px;
+    margin: 0 4px;
 }

@@ -24,8 +24,8 @@ function() {
     equals($('#topbar').topbar('option', 'rightClass'), '', 'rightClass');
     equals($('#topbar').topbar('option', 'linkClass'), '', 'linkClass');
     equals($('#topbar').topbar('option', 'useHtml'), false, 'useHtml');
-    equals($('#topbar').topbar('option', 'leftSeparator'), '', 'useSeparatorInLeft');
-    equals($('#topbar').topbar('option', 'rightSeparator'), '', 'useSeparatorInRight');
+    equals($('#topbar').topbar('option', 'leftSeparator'), '', 'leftSeparator');
+    equals($('#topbar').topbar('option', 'rightSeparator'), '', 'rightSeparator');
     
     $('#topbar').topbar('destroy');
 });
@@ -190,4 +190,26 @@ function () {
     var b = $div.find('div.right b');
     equals($div.find('div.right b').text(), 'Cinco link', 'O quinto elemento deve ser um b com texto "Cinco link"');
 
+    $('#topbar').topbar('destroy');
+});
+
+test('Barra inclui separador se for diferente de vazio',
+function () {
+    $('#topbar').topbar({
+        'leftSeparator': '#',
+        'leftLinks': [
+            {'text': 'Um link', 'href': '/umlink/'},
+            {'text': 'Dois link', 'href': '/doislink/'},
+            {'text': 'Três link', 'href': '/treslink/'},
+        ],
+        'rightSeparator': '|',
+        'rightLinks': [
+            {'text': 'Quatro link', 'href': '/quatrolink/'},
+            {'text': 'Cinco link', 'current': true},
+            {'text': 'Seis link', 'href': '/seislink/'},
+            {'text': 'Sete link', 'href': '/setelink/'},
+        ]
+    });
+    equals($('#topbar div.left').text(), 'Um link#Dois link#Três link')
+    equals($('#topbar div.right').text(), 'Quatro link|Cinco link|Seis link|Sete link')        
 });
