@@ -30,21 +30,22 @@ Create a div anywhere in your HTML:
 
 Implement the code to create de top bar:
 
-@<script type="text/javascript">@
-@    $('#myTopBar').topbar({@
-@        'leftLinks': [@
-@            {'text': 'One link', 'href': '/onelink/'},@
-@            {'text': 'Two link', 'href': '/twolink/'},@
-@            {'text': 'Three link', 'href': '/threelink/'},@
-@        ],@
-@        'rightSeparator': '|',@
-@        'rightLinks': [@
-@            {'text': 'Four link', 'href': '/fourlink/'},@
-@            {'text': 'Five link', 'current': true},@
-@            {'text': 'Six link', 'href': '/sixlink/'},@
-@            {'text': 'Seven link', 'href': '/sevenlink/'},@
-@        ]@
-@    });@
-@</script>@
+bc. <script type="text/javascript">
+    $('#myTopBar').topbar({
+        'leftLinks': [
+            {'text': 'One link', 'href': '/onelink/'},
+            {'text': 'Two link', 'href': '/twolink/'},
+            {'text': 'Three link', 'href': '/threelink/'},
+        ],
+        'rightSeparator': '|',
+        'rightLinks': [
+            {'text': 'Four link', 'href': '/fourlink/'},
+            {'text': 'Five link', 'current': true},
+            {'text': 'Six link', 'href': '/sixlink/'},
+            {'text': 'Seven link', 'href': '/sevenlink/'},
+        ]
+    });
+</script>
+
 
 And that is it...
