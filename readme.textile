@@ -8,7 +8,7 @@ Its use the "jQuery widget factory":http://jqueryui.com/docs/Developer_Guide wic
 
 h3. Version
 
-v0.4.0 RC
+v0.4.1 RC
 
 h2. Dependencies:
 
