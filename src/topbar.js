@@ -34,11 +34,11 @@ $.widget('ui.topbar', {
     },
     destroy: function() {
         if (!this.options.useHtml) {
-        	this.leftDiv.remove();
-        	this.rightDiv.remove();
-	    }
-    	$.Widget.prototype.destroy.apply(this, arguments);
-	},
+            this.leftDiv.remove();
+            this.rightDiv.remove();
+        }
+        $.Widget.prototype.destroy.apply(this, arguments);
+    },
     _validateDivPresence: function(position) {
         if (this.element.find('div.' + position).length == 0) {
             throw('The element must have a div with a class "{position}".'.replace('{position}', position))
@@ -58,6 +58,14 @@ $.widget('ui.topbar', {
         for (var i = 0; i < this.options[position + 'Links'].length; i++) {
             var item = this.options[position + 'Links'][i];
             var $el = $('<a></a>');
+            
+            if (item.classes) {
+                for (var klsIndex=0; klsIndex<item.classes.length; klsIndex++){
+                    var kls = item.classes[klsIndex];
+                    $el.addClass(kls);                    
+                }
+            }
+            
             $el.attr('href', item.href);
             if (item.current) {
                 $el = $('<b></b>')

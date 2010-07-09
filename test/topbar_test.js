@@ -168,6 +168,23 @@ function () {
     $('#topbar').topbar('destroy');
 });
 
+test('Recebe json com link com classes e exibe na esquerda',
+function () {
+    $('#topbar').topbar({
+        'leftLinks': [
+            {'text': 'Um link', 'href': '/umlink/', 'classes': ['myClass', 'otherClass']}
+        ]
+    });
+    
+    var $div = $('#topbar')
+    var $link = $div.find('div.left a');
+
+    ok($link.hasClass('myClass'));
+    ok($link.hasClass('otherClass'));
+
+    $('#topbar').topbar('destroy');
+});
+
 test('Barra nao monta link para item marcado como current',
 function () {
     $('#topbar').topbar({
