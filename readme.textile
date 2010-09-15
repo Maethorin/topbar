@@ -55,4 +55,4 @@ bc. <script type="text/javascript">
 
 And that is it...
 
-!samples/basic_sample.png!
+!http://github.com/Maethorin/topbar/raw/master/samples/basic_sample.png!
